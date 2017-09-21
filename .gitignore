@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
 # compiled output
 /dist
 /tmp
@@ -100,5 +97,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
->>>>>>> 778859f2f42ee3c7c27965880fb655b3853f5c4c
