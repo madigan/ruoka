@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-recipe-list',
-  template: `<p>Someday I'm gonna list recipes!</p>`
+  template: `<app-recipe-item></app-recipe-item>`
 })
 export class RecipeListComponent {
 
