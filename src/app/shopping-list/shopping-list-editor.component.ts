@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-shopping-list-editor',
-  template: `I'm gonna be a shopping list editor some day!`
+  templateUrl: './shopping-list-editor.component.html'
 })
-export class ShoppingListEditorComponent {
-  
-}
+export class ShoppingListEditorComponent { }
