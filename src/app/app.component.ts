@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavTag } from './nav-tag.model';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  currentPage:NavTag = NavTag.RECIPE;
+
+  onNavUpdate(tag:NavTag) {
+    this.currentPage = tag;
+  }
+
+  shouldShowRecipe():boolean {
+    return this.currentPage == NavTag.RECIPE;
+  }
+
+  shouldShowShoppingList():boolean {
+    return this.currentPage == NavTag.SHOPPING_LIST;
+  }
 }
