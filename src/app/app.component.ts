@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavTag } from './nav-tag.model';
+import { Recipe } from './recipe/recipe.model';
 
 @Component({
   selector: 'app-root',

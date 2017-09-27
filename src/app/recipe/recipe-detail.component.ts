@@ -6,5 +6,9 @@ import { Recipe } from './recipe.model';
   templateUrl: './recipe-detail.component.html'
 })
 export class RecipeDetailComponent {
-  @Input() public recipe:Recipe = new Recipe("TODO: Name", "TODO: Description", "http://placebear.com/g/300/200");
+  @Input() recipe:Recipe;
+
+  setRecipe(recipe:Recipe):void {
+    this.recipe = recipe;
+  }
 }
