@@ -1,24 +1,11 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
+
 import { Recipe } from './recipe.model';
 
-@Component({
-  selector: 'app-recipe-list',
-  template: `
-  <div class='row'>
-    <div class='col-xs-12'>
-      <button class='btn btn-success'>New Recipe!</button>
-    </div>
-  </div>
-  <hr>
-  <app-recipe-item
-    *ngFor='let recipe of recipes'
-    [recipe]='recipe'
-    (click)='onRecipeSelected(recipe)'>
-  </app-recipe-item>
-  `
-})
-export class RecipeListComponent {
-  recipes: Recipe[] = [
+@Injectable()
+export class RecipesService {
+  public selectedRecipe:Recipe;
+  public recipeList:Recipe[] = [
     new Recipe(
       "Strudel",
       "A delicious germanic dish.",
@@ -29,13 +16,7 @@ export class RecipeListComponent {
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/The_Turkey_Is_Done.jpg/800px-The_Turkey_Is_Done.jpg"),
     new Recipe(
       "Ursor Surprise",
-      "This is no recipe- it's a bear!",
+      "This is no recipe- it is a bear!",
       "http://placebear.com/g/300/200")
   ];
-
-  @Output() recipeSelected:EventEmitter<Recipe> = new EventEmitter<Recipe>();
-
-  onRecipeSelected(recipe:Recipe):void {
-    this.recipeSelected.emit(recipe);
-  }
 }
